@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/card_radius"
+    app:cardElevation="4dp"
+    android:clipToPadding="false"
+    android:layout_marginStart="@dimen/margin_top"
+    android:layout_marginEnd="@dimen/margin_top"
+    android:layout_marginBottom="@dimen/margin_top"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCountryImage"
+            android:layout_width="@dimen/imv_size"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thailand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="@dimen/tv"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_small"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="Thailand"
+            android:singleLine="true"
+            android:textSize="@dimen/text_view"
+            android:ems="2"
+            app:layout_constraintStart_toEndOf="@+id/ivCountryImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTourCount"
+            android:layout_width="@dimen/tv_tv"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/tv_quality"
+            app:layout_constraintStart_toStartOf="@+id/tvCountryName"
+            app:layout_constraintTop_toBottomOf="@+id/tvCountryName" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRates"
+            android:layout_width="@dimen/thirty"
+            android:layout_height="@dimen/seventy"
+            android:layout_marginEnd="@dimen/margin_start"
+            android:background="@drawable/round_text_view_tour"
+            android:drawableBottom="@drawable/ic_star_black_24dp"
+            android:paddingStart="@dimen/margin_small"
+            android:gravity="center"
+            android:paddingTop="@dimen/six"
+            android:paddingEnd="@dimen/margin_small"
+            android:paddingBottom="@dimen/margin_start"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCountryImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivCountryImage" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPrice"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textSize="@dimen/text_view"
+            android:fontFamily="sans-serif-condensed-medium"
+            app:layout_constraintStart_toStartOf="@+id/tvCountryName"
+            app:layout_constraintTop_toBottomOf="@+id/tvTourCount" />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

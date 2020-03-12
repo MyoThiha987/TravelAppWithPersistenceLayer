@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.FavouriteFragment">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivImageDetail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/imv_sizes"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thailand"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_start"
+            android:src="@drawable/ic_keyboard_backspace_black_24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivImageDetail" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_start"
+            android:src="@drawable/ic_share_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSave"
+            app:layout_constraintEnd_toStartOf="@+id/ivSave"
+            app:layout_constraintTop_toTopOf="@+id/ivSave" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_start"
+            android:layout_marginEnd="@dimen/margin_start"
+            android:src="@drawable/ic_favorite_border_black_24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ivImageDetail" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvResortName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/margin_top"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="asd"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/text_view"
+            app:layout_constraintBottom_toTopOf="@+id/ivLocation"
+            app:layout_constraintStart_toStartOf="@+id/ivBack" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location_on_black_24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLocation"
+            app:layout_constraintStart_toStartOf="@+id/tvResortName"
+            app:layout_constraintTop_toTopOf="@+id/tvLocation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLocation"
+            android:layout_width="@dimen/tv_fifty"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_top"
+            android:layout_marginBottom="@dimen/margin_top"
+            android:ems="2"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/tv_rate"
+            app:layout_constraintBottom_toTopOf="@+id/ratingBar"
+            app:layout_constraintStart_toEndOf="@id/ivLocation" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/ratingBar"
+            style="?attr/ratingBarStyleIndicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/sixty"
+            android:rating="2"
+            app:layout_constraintBottom_toBottomOf="@+id/ivImageDetail"
+            app:layout_constraintStart_toStartOf="@+id/ivLocation" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_top"
+            android:fontFamily="sans-serif-condensed-medium"
+            android:text="2.1"
+            android:textColor="@color/colorWhite"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@id/ratingBar"
+            app:layout_constraintStart_toEndOf="@id/ratingBar"
+            app:layout_constraintTop_toTopOf="@id/ratingBar" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/margin_top"
+            android:background="@drawable/constraint_layout_corner_design"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ratingBar">
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivWifi"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:background="@drawable/round_image_button"
+                android:elevation="10dp"
+                android:layout_marginTop="@dimen/margin_start"
+                android:src="@drawable/ic_wifi_black_24dp"
+                app:layout_constraintEnd_toStartOf="@+id/ivBeach"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivBar"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:background="@drawable/round_image_button"
+                android:elevation="10dp"
+                android:src="@drawable/ic_wine"
+                app:layout_constraintBottom_toBottomOf="@+id/ivCostile"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivCostile"
+                app:layout_constraintTop_toTopOf="@+id/ivCostile" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivBeach"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:background="@drawable/round_image_button"
+                android:elevation="10dp"
+                android:src="@drawable/ic_island"
+                app:layout_constraintBottom_toBottomOf="@+id/ivWifi"
+                app:layout_constraintEnd_toStartOf="@+id/ivCostile"
+                app:layout_constraintStart_toEndOf="@+id/ivWifi"
+                app:layout_constraintTop_toTopOf="@+id/ivWifi" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ivCostile"
+                android:layout_width="@dimen/fifty"
+                android:layout_height="@dimen/fifty"
+                android:background="@drawable/round_image_button"
+                android:elevation="10dp"
+                android:src="@drawable/ic_coastile"
+                app:layout_constraintBottom_toBottomOf="@+id/ivBeach"
+                app:layout_constraintEnd_toStartOf="@+id/ivBar"
+                app:layout_constraintStart_toEndOf="@+id/ivBeach"
+                app:layout_constraintTop_toTopOf="@+id/ivBeach" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvWifi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/free_wifi"
+                android:layout_marginTop="@dimen/margin_top"
+                android:padding="@dimen/margin_top"
+                app:layout_constraintEnd_toEndOf="@+id/ivWifi"
+                app:layout_constraintStart_toStartOf="@+id/ivWifi"
+                app:layout_constraintTop_toBottomOf="@+id/ivWifi" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBeach"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:padding="8dp"
+                android:text="@string/sand_beach"
+                app:layout_constraintEnd_toEndOf="@+id/ivBeach"
+                app:layout_constraintStart_toStartOf="@+id/ivBeach"
+                app:layout_constraintTop_toBottomOf="@+id/ivWifi" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvCoastline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_top"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginStart="@dimen/twelve"
+                android:text="@string/coastline"
+                app:layout_constraintEnd_toEndOf="@+id/ivCostile"
+                app:layout_constraintStart_toStartOf="@+id/ivCostile"
+                app:layout_constraintTop_toBottomOf="@+id/ivCostile" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/margin_top"
+                android:text="@string/bar"
+                android:layout_marginTop="@dimen/margin_top"
+                android:layout_marginStart="@dimen/twelve"
+                app:layout_constraintEnd_toEndOf="@+id/ivBar"
+                app:layout_constraintStart_toStartOf="@+id/ivBar"
+                app:layout_constraintTop_toBottomOf="@+id/ivBar" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardBooking"
+                android:layout_width="@dimen/imv_size"
+                android:layout_height="@dimen/width"
+                android:layout_marginTop="@dimen/margin_start"
+                app:cardCornerRadius="@dimen/margin_start"
+                app:layout_constraintEnd_toEndOf="@+id/tvBeach"
+                app:layout_constraintStart_toStartOf="@+id/tvWifi"
+                app:layout_constraintTop_toBottomOf="@+id/tvWifi">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlue">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/appCompatImageView2"
+                        android:layout_width="@dimen/fourty"
+                        android:layout_height="@dimen/fourty"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginTop="@dimen/margin_start"
+                        android:src="@drawable/ic_booking"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvBooking"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/appCompatImageView2"
+                        app:layout_constraintTop_toTopOf="@id/appCompatImageView2" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_top"
+                        app:layout_constraintEnd_toEndOf="@+id/tvBooking"
+                        app:layout_constraintStart_toStartOf="@+id/tvBooking"
+                        app:layout_constraintTop_toBottomOf="@id/tvBooking" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_top"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginEnd="@dimen/margin_start"
+                        android:singleLine="false"
+                        app:layout_constraintEnd_toEndOf="@+id/appCompatImageView2"
+                        app:layout_constraintStart_toStartOf="@+id/appCompatImageView2"
+                        app:layout_constraintTop_toBottomOf="@id/appCompatImageView2" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardHotelOut"
+                android:layout_width="@dimen/imv_size"
+                android:layout_height="@dimen/width"
+                app:cardCornerRadius="@dimen/margin_start"
+                app:layout_constraintBottom_toBottomOf="@+id/cardBooking"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/cardBooking"
+                app:layout_constraintTop_toTopOf="@+id/cardBooking">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorBlue">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivHotelOut"
+                        android:layout_width="@dimen/fourty"
+                        android:layout_height="@dimen/fourty"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginTop="@dimen/margin_start"
+                        android:src="@drawable/ic_recommendation"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHotelOut"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/ivHotelOut"
+                        app:layout_constraintTop_toTopOf="@id/ivHotelOut" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHotelOutScore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_top"
+                        app:layout_constraintEnd_toEndOf="@+id/tvHotelOut"
+                        app:layout_constraintStart_toStartOf="@+id/tvHotelOut"
+                        app:layout_constraintTop_toBottomOf="@id/tvHotelOut" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvHotelOutReview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_start"
+                        android:layout_marginTop="@dimen/margin_top"
+                        android:singleLine="false"
+                        app:layout_constraintEnd_toEndOf="@+id/ivHotelOut"
+                        app:layout_constraintStart_toStartOf="@+id/ivHotelOut"
+                        app:layout_constraintTop_toBottomOf="@id/ivHotelOut" />
+
+
+
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDetails"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                android:singleLine="false"
+                android:maxLines="2"
+                android:padding="@dimen/margin_top"
+                app:layout_constraintEnd_toEndOf="@+id/cardHotelOut"
+                app:layout_constraintStart_toStartOf="@+id/cardBooking"
+                app:layout_constraintTop_toBottomOf="@+id/cardBooking" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvPhotos"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_top"
+                app:layout_constraintEnd_toEndOf="@+id/ivBar"
+                app:layout_constraintStart_toStartOf="@+id/cardBooking"
+                app:layout_constraintTop_toBottomOf="@+id/tvDetails" />
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

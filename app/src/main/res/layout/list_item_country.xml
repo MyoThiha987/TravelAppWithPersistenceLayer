@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="180dp"
+    android:layout_height="260dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    android:clipToPadding="false"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCountryImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/thailand"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvNew"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:text="@string/news"
+            android:textColor="@color/colorWhite"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/margin_start"
+            android:layout_marginStart="@dimen/margin_start"
+            android:background="@drawable/round_text_view"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCountryName"
+            android:layout_width="@dimen/width"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:ems="2"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_start"
+            android:text="@string/thailand"
+            android:textSize="@dimen/text_sizes"
+            android:layout_marginBottom="@dimen/margin_top"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintBottom_toTopOf="@+id/tvTourCount"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTourCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_start"
+            android:layout_marginTop="@dimen/margin_start"
+            android:text="18 Tours"
+            android:textSize="@dimen/text_sizes"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="@dimen/margin_start"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRate"
+            android:layout_width="@dimen/fourty"
+            android:layout_height="@dimen/ninty"
+            android:background="@drawable/round_text_view"
+            android:drawableBottom="@drawable/ic_star_black_24dp"
+            android:paddingStart="@dimen/margin_top"
+            android:paddingTop="24dp"
+            android:paddingEnd="@dimen/margin_top"
+            android:paddingBottom="@dimen/margin_start"
+            android:text=""
+            android:gravity="center"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/tv_rate"
+            app:layout_constraintBottom_toBottomOf="@+id/tvTourCount"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvCountryName"
+            />
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
